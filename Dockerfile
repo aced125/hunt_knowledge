@@ -13,7 +13,7 @@ ENV AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 RUN apt-get update && apt-get install -y \
     python3-pip
 
-RUN pip3 install ipython
+#RUN pip3 install ipython
 RUN mkdir /app
 WORKDIR /app
 COPY . /app
