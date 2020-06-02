@@ -1,0 +1,38 @@
+# Config file for automatic testing at travis-ci.com
+
+language: python
+python:
+  - 3.8
+
+services:
+  - docker
+
+# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+install: pip install -U tox-travis
+
+# Command to run tests, e.g. python setup.py test
+script: tox
+
+after_success:
+  - docker --version
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
+  - aws ecr get-login-password | docker login -u AWS --password-stdin 606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge
+  - docker build -t hunt_knowledge .
+  - docker tag hunt_knowledge:latest 606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge:latest
+  - docker push 606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge:latest
+
+# Assuming you have installed the travis-ci CLI tool, after you
+# create the Github repo and add it to Travis, run the
+# following command to finish PyPI deployment setup:
+# $ travis encrypt --add deploy.password
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: aced125
+  password:
+    secure: PLEASE_REPLACE_ME
+  on:
+    tags: true
+    repo: aced125/hunt_knowledge
+    python: 3.8
