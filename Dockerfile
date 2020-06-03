@@ -20,8 +20,8 @@ WORKDIR /app
 COPY . /app
 RUN pip3 install -e /app
 
-ENTRYPOINT ["bash"]
-
+#ENTRYPOINT ["bash"]
+ENTRYPOINT ["scrapy"]
 
 
 ## install google chrome
