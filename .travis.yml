@@ -1,32 +1,34 @@
 language: python
 python:
-- 3.8
+  - 3.8
 services:
-- docker
+  - docker
 install: pip install -U tox-travis
 script: tox
 after_success:
-- docker --version
-- pip install awscli
-- aws ecr get-login-password | docker login \
-    --username AWS \
-    --password-stdin 606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge
-
-- docker build \
-    --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID \
-    --build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY \
-    --build-arg AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION \
-    -t hunt_knowledge .
-
-- docker tag hunt_knowledge:latest 606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge:latest
-- docker push 606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge:latest
+  - docker --version
+  - pip install awscli
+  - >-
+    aws ecr get-login-password | docker login --username AWS --password-stdin
+    606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge
+  - >-
+    docker build --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID --build-arg
+    AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY --build-arg
+    AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION -t hunt_knowledge .
+  - >-
+    docker tag hunt_knowledge:latest
+    606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge:latest
+  - >-
+    docker push
+    606574894755.dkr.ecr.eu-west-1.amazonaws.com/hunt-knowledge:latest
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: aced125
   password:
-    secure: evu9Bi15b5q1Jy63BwG5PBzfICwWZr2+vxT0CSJpuSK7R2C3gaLR4yiDnMWof1oh84mdzAXS55A/0hDm7Z9judP9bLKqo6wR/psU4SMmm6kOH9NoO+aI4S58utP7YAa2tvjHRlKQH8emNPwSqstkhmI20VVd44UCH5ZQT1XsMHgXkzaXguaYckFBGErOuCOxEsTfS2x+md+zoEWdlpR9QM9B8CxStvq8HyOLr+YloIlGI689gG9/eOaQVimmY7pSuSqA9TtjpsFwive9V8JfRTGnmooavoZ47X7rvmNTPhDqrFVEwrk6CfXrpYESlS1Zqof7QozkLRAeOijfABBxHyjdY87gB5CxN8UaGEwrcam0oFXWZOjUadG3VW+sEcWwsVm4nwybuppR11wLYcQU7gEhF5jb9EcxmiCQ79KYzkImsvC6mQeyM67/gXx5qDF1H7tGDZWVDck28ypfk6Up4iLrSjt4L93zZTE6SUfIUzkQJ6qhcBzR8FUlXbHM0eoNnlpFvB1M+lpposKmzMroQEJDUTPajb3vxYp69mrNnU48iE8+KvaJbh52OSrsWOf0uADOJdPPiOD+JuIExJTlFQJRDNpitHrpq4VLO1hyvdlQXN7xyK2BkXuR2qOoVlmPiW1SBx0guWEgWBRSNmN/CvPeT9RDbrPo+/OVus9EMjQ=
-  on:
+    secure: >-
+      evu9Bi15b5q1Jy63BwG5PBzfICwWZr2+vxT0CSJpuSK7R2C3gaLR4yiDnMWof1oh84mdzAXS55A/0hDm7Z9judP9bLKqo6wR/psU4SMmm6kOH9NoO+aI4S58utP7YAa2tvjHRlKQH8emNPwSqstkhmI20VVd44UCH5ZQT1XsMHgXkzaXguaYckFBGErOuCOxEsTfS2x+md+zoEWdlpR9QM9B8CxStvq8HyOLr+YloIlGI689gG9/eOaQVimmY7pSuSqA9TtjpsFwive9V8JfRTGnmooavoZ47X7rvmNTPhDqrFVEwrk6CfXrpYESlS1Zqof7QozkLRAeOijfABBxHyjdY87gB5CxN8UaGEwrcam0oFXWZOjUadG3VW+sEcWwsVm4nwybuppR11wLYcQU7gEhF5jb9EcxmiCQ79KYzkImsvC6mQeyM67/gXx5qDF1H7tGDZWVDck28ypfk6Up4iLrSjt4L93zZTE6SUfIUzkQJ6qhcBzR8FUlXbHM0eoNnlpFvB1M+lpposKmzMroQEJDUTPajb3vxYp69mrNnU48iE8+KvaJbh52OSrsWOf0uADOJdPPiOD+JuIExJTlFQJRDNpitHrpq4VLO1hyvdlQXN7xyK2BkXuR2qOoVlmPiW1SBx0guWEgWBRSNmN/CvPeT9RDbrPo+/OVus9EMjQ=
+  'on':
     tags: true
     repo: aced125/hunt_knowledge
     python: 3.8
