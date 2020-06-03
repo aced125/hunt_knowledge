@@ -5,6 +5,8 @@ from urllib.parse import urlparse
 from collections import defaultdict
 import boto3
 from hunt_knowledge import utils
+import uuid
+import datetime
 import logging
 
 logger = logging.getLogger(__name__)
@@ -66,8 +68,18 @@ class FierceBiotechSpider(scrapy.Spider):
         nlp = utils.send_pipeline_request(url)
         doc = nlp["doc"]
         return {
+            "id": str(uuid.uuid1()),
+            "__typename": "Article",
+            "createdAt": datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
+            "updatedAt": datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
+            "mercuryObj": {
+                "url": url,
+                "title": nlp["title"],
+                "domain": nlp["source"],
+            },
             "url": url,
-            "category": category,
+            "category": "pharma",
+            "subcategory": category,
             "absSum": doc["abstractiveSummary"],
             "title": nlp["title"],
             "source": nlp["source"],
