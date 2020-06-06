@@ -10,7 +10,7 @@ from datetime import datetime, date, timedelta
 
 def setup_webdriver(local=False):
     if local:
-        return webdriver.Chrome('/usr/bin/chromedriver')
+        return webdriver.Chrome("/usr/bin/chromedriver")
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument("--window-size=1420,1080")
