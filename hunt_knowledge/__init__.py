@@ -3,5 +3,5 @@
 # fmt: off
 __author__ = """Laksh"""
 __email__ = 'lakshaithanii@gmail.com'
-__version__ = '0.1.2'
+__version__ = '0.1.3'
 # fmt: on
