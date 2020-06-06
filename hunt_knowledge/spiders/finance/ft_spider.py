@@ -12,21 +12,24 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-class FierceBiotechSpider(scrapy.Spider):
-    name = "fiercebiotech"
-    base_url = "https://www.fiercebiotech.com/"
+class FTSpider(scrapy.Spider):
+    name = "ft"
+    base_url = "https://www.ft.com/"
     categories = [
-        "biotech",
-        "covid-19",
-        "research",
-        "medtech",
-        "cro",
-        "cell-gene-therapy",
+        "world",
+        "world/uk",
+        "companies",
+        "technology",
+        "markets",
     ]
 
     def __init__(self):
         super().__init__()
         self.driver = utils.setup_webdriver()
+        self.login()
+
+    def login(self):
+        self.driver.get("https://www.ft.com")
 
     def start_requests(self):
         urls = [self.base_url + url for url in self.categories]
@@ -70,13 +73,15 @@ class FierceBiotechSpider(scrapy.Spider):
         return {
             "id": str(uuid.uuid1()),
             "__typename": "Article",
-            "createdAt": datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
-            "updatedAt": datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z',
-            "mercuryObj": {
-                "url": url,
-                "title": nlp["title"],
-                "domain": nlp["source"],
-            },
+            "createdAt": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%f")[
+                :-3
+            ]
+            + "Z",
+            "updatedAt": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%f")[
+                :-3
+            ]
+            + "Z",
+            "mercuryObj": {"url": url, "title": nlp["title"], "domain": nlp["source"],},
             "url": url,
             "category": "pharma",
             "subcategory": category,
