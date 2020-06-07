@@ -93,7 +93,7 @@ class FTSpider(scrapy.Spider):
 
     def parse(self, response):
         url = response.url
-        hrefs = utils.get_all_hrefs(self.driver, url)
+        hrefs = utils.selenium_get_all_urls_on_page(self.driver, url)
         output = self.filter_and_process(hrefs)
         db = boto3.resource("dynamodb")
         db_name = "CuratedArticlesDB"

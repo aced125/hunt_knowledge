@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc71c6be-1476-42e7-b88c-ee6f764c9eb7" name="Default Changelist" comment="" />
+    <list default="true" id="cc71c6be-1476-42e7-b88c-ee6f764c9eb7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/hunt_knowledge/spiders/healthcare/pharmaceutical_technology_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,11 +60,11 @@
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
     <state x="1231" y="54" key="#Dockerfile/0.0.3840.2124/3840.0.3840.2160@0.0.3840.2124" timestamp="1591119551351" />
-    <state x="2878" y="523" key="FileChooserDialogImpl" timestamp="1591467057100">
+    <state x="2878" y="523" key="FileChooserDialogImpl" timestamp="1591481905090">
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
     <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124/3840.0.3840.2160@3840.0.3840.2160" timestamp="1591130061963" />
-    <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124@0.0.3840.2124" timestamp="1591467057100" />
+    <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124@0.0.3840.2124" timestamp="1591481905090" />
     <state x="787" y="247" key="SettingsEditor" timestamp="1591465792034">
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
