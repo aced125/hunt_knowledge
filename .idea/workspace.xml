@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc71c6be-1476-42e7-b88c-ee6f764c9eb7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hunt_knowledge/spiders/politics/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hunt_knowledge/spiders/politics/uk_petitions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hunt_knowledge/spiders/armiger/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hunt_knowledge/spiders/armiger/jpost.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +34,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Genei_stuff/pdf_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Genei_stuff/geneipipe" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -47,6 +47,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -68,10 +69,10 @@
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
     <state x="1231" y="54" key="#Dockerfile/0.0.3840.2124/3840.0.3840.2160@0.0.3840.2124" timestamp="1591119551351" />
-    <state x="2878" y="523" key="FileChooserDialogImpl" timestamp="1592329256980">
+    <state x="2878" y="523" key="FileChooserDialogImpl" timestamp="1598945722719">
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
-    <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124/3840.0.3840.2160@3840.0.3840.2160" timestamp="1591130061963" />
+    <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124/3840.0.3840.2160@3840.0.3840.2160" timestamp="1598945722719" />
     <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124@0.0.3840.2124" timestamp="1592329256980" />
     <state x="1804" y="473" key="IDE.errors.dialog" timestamp="1591488846851">
       <screen x="0" y="0" width="3840" height="2124" />
@@ -82,10 +83,10 @@
     </state>
     <state x="787" y="247" key="SettingsEditor/0.0.3840.2124/3840.0.3840.2160@0.0.3840.2124" timestamp="1591058608953" />
     <state x="787" y="247" key="SettingsEditor/0.0.3840.2124@0.0.3840.2124" timestamp="1591465792034" />
-    <state x="5122" y="447" width="1275" height="1270" key="find.popup" timestamp="1591125096244">
+    <state x="5122" y="447" width="1275" height="1270" key="find.popup" timestamp="1598944002648">
       <screen x="3840" y="0" width="3840" height="2160" />
     </state>
-    <state x="5122" y="447" width="1275" height="1270" key="find.popup/0.0.3840.2124/3840.0.3840.2160@3840.0.3840.2160" timestamp="1591125096244" />
+    <state x="5122" y="447" width="1275" height="1270" key="find.popup/0.0.3840.2124/3840.0.3840.2160@3840.0.3840.2160" timestamp="1598944002648" />
     <state x="1397" y="869" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1591140676499">
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
