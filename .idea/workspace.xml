@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc71c6be-1476-42e7-b88c-ee6f764c9eb7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hunt_knowledge/spiders/healthcare/pharmaceutical_technology_spider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hunt_knowledge/spiders/politics/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hunt_knowledge/spiders/politics/uk_petitions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,15 +23,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ck2m65bPtX6ssBHmRybbOM6V6R" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Genei_stuff/geneipipe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Genei_stuff/pdf_api" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -55,16 +60,23 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1231" y="54" key="#Dockerfile" timestamp="1591119551351">
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
     <state x="1231" y="54" key="#Dockerfile/0.0.3840.2124/3840.0.3840.2160@0.0.3840.2124" timestamp="1591119551351" />
-    <state x="2878" y="523" key="FileChooserDialogImpl" timestamp="1591481905090">
+    <state x="2878" y="523" key="FileChooserDialogImpl" timestamp="1592329256980">
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
     <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124/3840.0.3840.2160@3840.0.3840.2160" timestamp="1591130061963" />
-    <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124@0.0.3840.2124" timestamp="1591481905090" />
+    <state x="2878" y="523" key="FileChooserDialogImpl/0.0.3840.2124@0.0.3840.2124" timestamp="1592329256980" />
+    <state x="1804" y="473" key="IDE.errors.dialog" timestamp="1591488846851">
+      <screen x="0" y="0" width="3840" height="2124" />
+    </state>
+    <state x="1804" y="473" key="IDE.errors.dialog/0.0.3840.2124@0.0.3840.2124" timestamp="1591488846851" />
     <state x="787" y="247" key="SettingsEditor" timestamp="1591465792034">
       <screen x="0" y="0" width="3840" height="2124" />
     </state>
