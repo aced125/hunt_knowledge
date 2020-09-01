@@ -44,7 +44,8 @@ def selenium_get_all_urls_on_page(driver, url, drop_duplicates=True) -> List[str
 
 
 def send_pipeline_request(url):
-    api = "http://ac6b3caf43dd145eb8bd6baf06aa83aa-e02d1280de19e099.elb.eu-west-1.amazonaws.com/genei-pipeline"
+    # api = "http://ac6b3caf43dd145eb8bd6baf06aa83aa-e02d1280de19e099.elb.eu-west-1.amazonaws.com/genei-pipeline"
+    api = "https://w3ddy8vzni.execute-api.eu-west-1.amazonaws.com/v1/genei-pipeline"
     headers = {"Content-type": "application/json"}
     generation_args = {
         "beam": 8,
